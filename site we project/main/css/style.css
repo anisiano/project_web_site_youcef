@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Mitr:wght@200;300;400;500;600;700&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700");
+:root {
+    --primary:#ffbd00;
+    --secondary:#ff60ce;
+    --background:#0b0016;
+    --grey:#9b9eac;
+    --light:#fff;
+    --dark:#0a0a0a;
+    --main-font:'Mitr', sans-serif ;
+    --secondary-font:'Barlow', sans-serif;
+    --sidePadding:10%;
+    --bigtextcolor: #ffbd00;
+    --btnColor: #ffbd00;
+    --btntextColor: #0a0a0a;
+    --btntextColorHover: #ffbd00;
+    --btnBorderColor: #ffbd00;
+}
+*{
+    box-sizing: border-box;
+    font-family: var(--secondary-font);
+}
+body{
+    margin: 0; background-color: var(--background);
+    color: var(--grey);
+    width: 100%;
+}
+.main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 var(--sidePadding);
+}
+.nav-logo{
+    height: 6em;
+    width: 6em;
+    display: flex;
+    align-items: center;
+}
+.main-nav-elements{
+    display: flex;
+    margin: 0 0 0 auto;
+}
+.main-nav-elements{
+    list-style: none;
+    text-transform: uppercase;
+    margin: auto 1em;
+    font-weight: 700;
+}
+.main-nav-elements  a{
+    color: var(--light);
+    text-decoration: none;
+    padding: 1em;
+}
+.main-nav-elements:first-child a{
+    color: var(--primary);
+}
+.main-button{
+    background-color: var(--primary);
+    color: var(--dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    font-size: 1em;
+    margin: auto 0;
+}
+.hover-menu{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 2em;
+}
+.menu-holder{
+    position: relative;
+}
+.menu-holder:hover .hover-menu{
+    visibility: visible;
+}
+h1 {
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 5.3em;
+    width: 8.4ch;
+    max-width: 100%;
+    font-family: var(--main-font);
+    margin: 0;
+    color: var(--bigtextcolor);
+}
+h4 {
+    color: var(--secondary);
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    margin: 0;
+    color: var(--secondary);
+}
+h2 {
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 2.6em;
+    width: 9.6ch;
+    font-family: var(--main-font);
+    margin: 0;
+    color: var(--light);
+}
+header {
+    background: url("../images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh; /*image height: ;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#Location {
+    position: relative;
+}
+#Location::before {
+    content: " ";
+    z-index: 1000;
+    pointer-events: none;
+    background-color: rgba(11, 0, 22, 0.7);
+    position: absolute;
+    width: 100%;
+    transition: background-color 300ms ease-in-out;
+    height: calc(100% - 7em);
+}
+#Location:hover::before {
+    background-color: transparent;
+}
+.btn,
+.secondary-button,
+.secondary-button:hover {
+    background-color: var(--btnColor);
+    color: var(--btntextColor) !important;
+    border: 1px solid var(--btnBorderColor);
+    padding: 0.8em 1.5em !important;
+    margin: 0.5em 0;
+    font-weight: 700 !important;
+    transition: background-color 500ms ease-in, color 300ms ease-in !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.secondary-button {
+    background-color: transparent;
+    color: var(--btntextColorHover) !important;
+}
+.counting-Number {
+    font-size: 3em;
+    color: var(--secondary);
+    font-weight: 700;
+}
+.counting-text {
+    font-weight: 700;
+}
+h5 {
+    font-weight: 600;
+    font-size: 1.4em;
+    color:#ffbd00;
+}
